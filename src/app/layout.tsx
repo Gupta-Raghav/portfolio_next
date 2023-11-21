@@ -22,7 +22,8 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider attribute="class"
             defaultTheme="dark">
-           <MaxWidthWrapper> <Navbar/>
+                <Navbar/>
+              <MaxWidthWrapper> 
         {children}</MaxWidthWrapper>
         </ThemeProvider>
         </body>
