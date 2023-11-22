@@ -25,7 +25,7 @@ function Hero() {
                     <h5 className="boundingelem">from Jan '24</h5>
                 </div>
             </div>
-    <div className="w-full flex justify-between items-center bottom-0 absolute"> 
+    {/* <div className="w-full flex justify-between items-center bottom-0 absolute"> 
         <a href="https://drive.google.com/file/d/13MjrDsANnUSSPSVIQdF6B11PrF57cw4R/view?usp=sharing"
             className="underline flex">check out my
             resume<ArrowUpRight/></a>
@@ -34,7 +34,7 @@ function Hero() {
             <div className="circle"><MoveDown /></div>
             <div className="circle"><MoveDown /></div>
         </div>
-    </div>
+    </div> */}
         </div>
     </MaxWidthWrapper>
     
