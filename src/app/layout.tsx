@@ -5,6 +5,7 @@ import { ThemeProvider } from '@/components/theme-provider'
 import Navbar from '@/components/Navbar'
 import MaxWidthWrapper from '@/components/MaxWidthWrapper'
 import NavbarBottom from '@/components/NavbarBottom'
+import CustomCursor from '@/components/CustomeCursor'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,14 +20,18 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className='scroll-smooth'>
       <body className={inter.className}>
         <ThemeProvider attribute="class"
             defaultTheme="dark">
+          {/* <div id='minicircle' className='w-10 h-10 absolute bg-highlightColor z-50 rounded-full'>
+                
+              </div> */}
               <Navbar/> 
               <NavbarBottom/>  
               <MaxWidthWrapper> 
         {children}</MaxWidthWrapper>
+          <CustomCursor />
         </ThemeProvider>
         </body>
     </html>

@@ -1,4 +1,3 @@
-// @/components/HonestHero.tsx
 "use client"
 
 import Link from "next/link"
@@ -40,26 +39,26 @@ export default function HonestHero() {
     }
 
     return (
-        <motion.div className="mask w-full h-screen bg flex items-center justify-center absolute top-0 left-0 z-10"
+        <motion.div className="w-full h-screen bg flex items-center justify-center absolute top-0 left-0 z-10 mask2"
             style={{
                 maskPosition: `${cursorPosition.x}px ${cursorPosition.y}px`,
                 WebkitMaskPositionX: cursorPosition.x,
                 WebkitMaskPositionY: cursorPosition.y,
+                // Rest of the styles
             }}
             animate={cursorType == "hovered" ? "hovered" : "default"}
             variants={variants}
         >
-            <div className="md:w-[clamp(400px,60vw,800px)] flex items-center justify-center flex-col w-full p-4 rounded-xl gap-8 ">
-                <div className="flex flex-col items-center"
-                    onPointerEnter={() => setCursorType("hovered")}
-                    onPointerLeave={() => setCursorType("default")}
-
+                <div className='flex flex-col items-center w-fit' onMouseEnter={() => setCursorType("hovered")}
+                        onMouseLeave={() => setCursorType("default")}
                 >
-                    <h1>AI is coming for our jobs</h1>
-                    <h2>Prepare yourself for the singularity :&#39;&#41;</h2>
+                <p className='text-xl sm:text-2xl mb-4 dark:opacity-80 uppercase font-extralight'>Raghav Gupta</p>
+                <h1 className='text-6xl sm:text-7xl dark:opacity-80 uppercase font-semibold'>Debugging </h1>
+                <h1 className='text-6xl sm:text-7xl dark:opacity-80 uppercase font-semibold text-highlightColor'>code</h1>
+                <h1 className='text-6xl sm:text-7xl dark:opacity-80 uppercase font-semibold text-highlightColor'>glitches</h1>
+                <h1 className='text-6xl sm:text-7xl dark:opacity-80 uppercase font-semibold'>since</h1>
+                <h1 className='text-6xl sm:text-7xl dark:opacity-80 uppercase font-semibold'>2020</h1>
                 </div>
-                <Link href="/about">Learn More</Link>
-            </div>
         </motion.div>
     )
 }

@@ -33,17 +33,27 @@ export default function CustomCursor() {
                 ease: 'easeInOut',
             },
             opacity: 1,
-            mixBlendMode: 'difference',
-            background: 'white'
+            background: '#EB5939'
         },
-        default: {
-            scale: 2,
-            border: '4px solid rgb(0, 109, 189)',
+        hoverSmall: {
+            scale: 1,
+            // border:  '8px solid rgb(0, 109, 189)',
             transition: {
                 duration: 0.2,
                 ease: 'easeInOut',
             },
             opacity: 1,
+            background: '#EB5939'
+        },
+        default: {
+            scale: 2.5,
+            transition: {
+                duration: 0.2,
+                ease: 'easeInOut',
+                
+            },
+            opacity: 1,
+            background: '#EB5939'
         },
     }
 
@@ -51,11 +61,11 @@ export default function CustomCursor() {
         <motion.div
             variants={hoverVariants as any}
             animate={cursorType}
-            className="sm:block hidden fixed left-0 top-0 w-4 h-4 border-[0px] rounded-full pointer-events-none z-50"
+            className="sm:block hidden fixed left-0 top-0 w-4 h-4  rounded-full pointer-events-none z-50"
             style={{
                 translateX: cursorX,
                 translateY: cursorY,
-                background: 'white',
+                background: 'highlightColor',
                 mixBlendMode: 'difference'
             }}
             // transition={{ type: "tween", ease: "backOut", duration:0.5}}

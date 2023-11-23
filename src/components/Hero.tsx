@@ -1,25 +1,30 @@
+"use client"
+import { useContext, useEffect, useState } from "react";
 import MaxWidthWrapper from "./MaxWidthWrapper"
 import{ArrowUpRight, MoveDown} from 'lucide-react'
+import { CursorContext } from "@/providers/cursorProvider";
 function Hero() {
+    const [cursorType, setCursorType] = useContext<any>(CursorContext);
   return (
     <MaxWidthWrapper>
-        <div className="relative h-screen">
-        <div className='pt-60 items-center'>
+        <div  className='flex justify-center pt-60 items-center'>
         {/* <h1 className='text-6xl sm:text-7xl dark:opacity-90 uppercase font-bold '>software</h1> */}
-        <div className='flex flex-col items-center width-fit'>
-        <h1 className='text-3xl sm:text-4xl mb-4 dark:opacity-80 uppercase font-thin'>Raghav Gupta</h1>
-            <h1 className='text-6xl sm:text-6xl dark:opacity-80 uppercase font-bold'>DEVELOPING </h1>
-            <h1 className='text-6xl sm:text-6xl dark:opacity-80 uppercase font-bold'>amazing</h1>
-            <h1 className='text-6xl sm:text-6xl dark:opacity-80 uppercase font-bold'>products</h1>
-            <h1 className='text-6xl sm:text-6xl dark:opacity-80 uppercase font-bold'>since</h1>
-            <h1 className='text-6xl sm:text-6xl dark:opacity-80 uppercase font-bold'>2020</h1>
+        <div className='flex flex-col items-center w-fit' onMouseEnter={() => setCursorType("hovered")}
+                        onMouseLeave={() => setCursorType("default")}>
+        <p className='text-xl sm:text-2xl mb-4 dark:opacity-80 uppercase font-extralight'>Raghav Gupta</p>
+            <h1 className='text-6xl sm:text-7xl dark:opacity-80 uppercase font-semibold'>DEVELOPING </h1>
+            <h1 className='text-6xl sm:text-7xl dark:opacity-80 uppercase font-semibold text-highlightColor'>amazing</h1>
+            <h1 className='text-6xl sm:text-7xl dark:opacity-80 uppercase font-semibold text-highlightColor'>products</h1>
+            <h1 className='text-6xl sm:text-7xl dark:opacity-80 uppercase font-semibold'>since</h1>
+            <h1 className='text-6xl sm:text-7xl dark:opacity-80 uppercase font-semibold'>2020</h1>
             {/* <p className='text-xs sm:text-lg text-right'></p> */}
         </div>
+        
     </div>
 
      <div className="flex flex-col items-end mt-24 text-sm sm:text-lg">
                 <div className="bounding">
-                    <h5 className="boundingelem">Looking for full time SWE roles</h5>
+                    <h5 className="font-light">Looking for full time SWE roles</h5>
                 </div>
                 <div className="bounding">
                     <h5 className="boundingelem">from Jan '24</h5>
@@ -35,7 +40,6 @@ function Hero() {
             <div className="circle"><MoveDown /></div>
         </div>
     </div> */}
-        </div>
     </MaxWidthWrapper>
     
   )

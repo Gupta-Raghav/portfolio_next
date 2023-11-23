@@ -51,5 +51,22 @@
           --ring: 240 4.9% 83.9%;
   }
 }
+@layer components {
+  .animated-underline {
+    @apply w-fit md:px-4 p-0 relative inline-block font-heading hover:after:scale-x-100 after:absolute after:bottom-[-1.3rem] after:left-0 after:transform after:scale-x-0 after:w-full after:transition-transform after:duration-200 after:origin-[0%_50%] after:h-[0.2rem] after:bg-black dark:after:bg-white;
+  }
 
+    .mask2 {
+      @apply bg-white dark:bg-black
+    }
+    }
 
+.mask2 {
+  --mask: radial-gradient(circle at 50% 50%, black 15%, transparent 0);
+  -webkit-clip-path: var(--mask);
+  clip-path: var(--mask);
+  -webkit-mask-image: var(--mask);
+  mask-image: var(--mask);
+  transition: -webkit-clip-path 0.3s ease-in-out;
+  pointer-events: none;
+}
